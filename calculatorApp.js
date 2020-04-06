@@ -18,6 +18,8 @@ document.getElementById("btnAdd").addEventListener("click", function() { setup("
 document.getElementById("btnSubtract").addEventListener("click", function() { setup("subtract"); });
 document.getElementById("btnMultiply").addEventListener("click", function() { setup("multiply"); });
 document.getElementById("btnDivide").addEventListener("click", function() { setup("divide"); });
+document.getElementById("btnExp").addEventListener("click", function () { setup("exponent") });
+document.getElementById("btnSqRoot").addEventListener("click", function () { setup("sqroot") });
 document.getElementById("btnAns").addEventListener("click", function () { answerButtonPressed() });
 
 // Define math functions
@@ -51,13 +53,25 @@ function divide(numbers) {
   }
 }
 
+function exponent(numbers) {
+
+  result = Math.pow(numbers[0], numbers[1]);
+  updateAnswer();
+}
+
+function sqRoot(number) {
+
+  result = Math.sqrt(number);
+  updateAnswer();
+}
+
 // Define helper functions
 function setup(operation) {
 
   let numbers = getValues();
 
   // Check if the numbers entered by the user are finite and usable
-  if (!isFinite(numbers[0]) || !isFinite(numbers[1])) {
+  if (!isFinite(numbers[0]) || (!isFinite(numbers[1])) && operation !== "sqroot") {
     hasError = true;
     errorType = NOT_FINITE_ERROR;
     updateAnswer();
@@ -78,6 +92,12 @@ function setup(operation) {
     case "divide":
       divide(numbers);
       return;
+    case "exponent":
+      exponent(numbers);
+      return;
+    case "sqroot":
+      sqRoot(numbers[0]);
+      return
   }
 }
 
