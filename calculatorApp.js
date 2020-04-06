@@ -92,7 +92,7 @@ function getValues() {
 function answerButtonPressed() {
 
   // Set Number 1 text box to result && clear Number 2 text box
-  document.getElementById("number1").value = result;
+  document.getElementById("number1").value = result.toFixed(4);
   document.getElementById("number2").value = "";
 }
 
@@ -103,6 +103,6 @@ function updateAnswer() {
     document.getElementById("answer").innerHTML = "<b>ERROR</b>: " + errorType;
     hasError = false; // reset hasError to false
   } else {
-    document.getElementById("answer").innerHTML = "<b>Answer</b>: " + result;
+    document.getElementById("answer").innerHTML = "<b>Answer</b>: " + result.toFixed(4);
   }
 }
