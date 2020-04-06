@@ -1,16 +1,24 @@
-<h1>My Ugly Calculator</h1>
+<head>
+    <title>My Ugly Little Calculator</title>
+    <script src="https://kit.fontawesome.com/7a4a1172be.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<h1><i class="fas fa-calculator"></i> My Ugly Little Calculator</h1>
 <p>Please enter two numbers below and click the operation you'd like to perform<br />
-You can click the "Ans" button to place the answer in the Number 1 spot.</p>
+    You can click the "Ans" button to place the answer in the Number 1 spot.</p>
 <label for="number1">Number 1: </label><input id="number1" type="number"/><button id="btnAns">Ans</button>
 <br />
 <label for="number2">Number 2: </label><input type="number" id="number2" />
 <br />
-<button id="btnAdd">&plus;</button>
-<button id="btnSubtract">&minus;</button>
-<button id="btnMultiply">&times;</button>
-<button id="btnDivide">&divide;</button>
+<button id="btnAdd"><i class="fas fa-plus"></i></button>
+<button id="btnSubtract"><i class="fas fa-minus"></i></button>
+<button id="btnMultiply"><i class="fas fa-times"></i></button>
+<button id="btnDivide"><i class="fas fa-divide"></i></button>
+<button id="btnExp"><i class="fas fa-superscript"></i></button>
+<button id="btnSqRoot"><i class="fas fa-square-root-alt"></i></button>
 
 <p id="answer"></p>
-
+</body>
 
 <script src="calculatorApp.js"></script>

@@ -11,6 +11,6 @@ This is version 2+ of the calculator app. It uses a more user-friendly UI writte
 
 - [x]  Add 'Ans' button
 - [x] Round answer to four decimal places
-- [ ] Extend with additional operations (square, cube, square root)
+- [x] Extend with additional operations (square, cube, square root)
 - [ ] Allow user to choose exponential power instead of just using square and cube
 - [ ] Add trigonometric functions (sine, cosine, tan)
